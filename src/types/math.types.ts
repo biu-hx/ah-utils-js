@@ -11,14 +11,6 @@ export type MathResult<T extends number | undefined = undefined> = T extends num
 // 比较结果
 export type CompareResult = -1 | 0 | 1
 
-// 运算类型
-export enum OperationType {
-  ADD = 0,
-  SUBTRACT = 1,
-  MULTIPLY = 2,
-  DIVIDE = 3,
-}
-
 // 数学运算配置
 export interface MathConfig {
   /** 精度（有效数字位数） */
@@ -29,43 +21,38 @@ export interface MathConfig {
 
 // 数学运算函数类型
 export interface MathOperations {
-  /** 加法 */
   add: <T extends number | undefined = undefined>(
-    a: MathValue,
-    b: MathValue,
-    digit?: T
+    _a: MathValue,
+    _b: MathValue,
+    _digit?: T
   ) => MathResult<T>
 
-  /** 减法 */
   subtract: <T extends number | undefined = undefined>(
-    a: MathValue,
-    b: MathValue,
-    digit?: T
+    _a: MathValue,
+    _b: MathValue,
+    _digit?: T
   ) => MathResult<T>
 
-  /** 乘法 */
   multiply: <T extends number | undefined = undefined>(
-    a: MathValue,
-    b: MathValue,
-    digit?: T
+    _a: MathValue,
+    _b: MathValue,
+    _digit?: T
   ) => MathResult<T>
 
-  /** 除法 */
   divide: <T extends number | undefined = undefined>(
-    a: MathValue,
-    b: MathValue,
-    digit?: T
+    _a: MathValue,
+    _b: MathValue,
+    _digit?: T
   ) => MathResult<T>
 
-  /** 数组求和 */
-  sum: <T extends number | undefined = undefined>(arr: MathValue[], digit?: T) => MathResult<T>
+  sum: <T extends number | undefined = undefined>(_arr: MathValue[], _digit?: T) => MathResult<T>
 
-  /** 数组连乘 */
-  product: <T extends number | undefined = undefined>(arr: MathValue[], digit?: T) => MathResult<T>
+  product: <T extends number | undefined = undefined>(
+    _arr: MathValue[],
+    _digit?: T
+  ) => MathResult<T>
 
-  /** 四舍五入 */
-  round: (num: MathValue, digit: number) => string
+  round: (_num: MathValue, _digit: number) => string
 
-  /** 比较大小 */
-  compare: (a: MathValue, b: MathValue) => CompareResult
+  compare: (_a: MathValue, _b: MathValue) => CompareResult
 }

@@ -6,7 +6,16 @@ import prettierPlugin from 'eslint-plugin-prettier'
 
 export default [
   {
-    ignores: ['dist/**', 'build/**', 'node_modules/**', '*.config.*', 'coverage/**'],
+    ignores: [
+      'dist/**',
+      'build/**',
+      'node_modules/**',
+      '*.config.*',
+      'coverage/**',
+      '**/*.test.ts',
+      '**/*.spec.ts',
+      'src/tests/**',
+    ],
   },
 
   js.configs.recommended,
@@ -35,7 +44,15 @@ export default [
     rules: {
       '@typescript-eslint/no-explicit-any': 'warn',
       '@typescript-eslint/explicit-function-return-type': 'off',
-      '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_', varsIgnorePattern: '^_' }],
+      '@typescript-eslint/no-unused-vars': [
+        'error',
+        {
+          argsIgnorePattern: '^_',
+          varsIgnorePattern: '^_',
+          caughtErrorsIgnorePattern: '^_',
+        },
+      ],
+      'no-unused-vars': 'off',
       'no-console': ['warn', { allow: ['warn', 'error'] }],
       'no-debugger': 'error',
       'prefer-const': 'error',

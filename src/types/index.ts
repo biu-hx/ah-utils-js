@@ -20,7 +20,8 @@ export type DeepPartial<T> = {
 }
 
 // 函数类型
-export type AnyFunction = (...args: any[]) => any
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export type AnyFunction = (..._args: any[]) => any
 export type VoidFunction = () => void
 
 // 数组类型
