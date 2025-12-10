@@ -1,5 +1,5 @@
 {
-  "name": "ah-utils-js",
+  "name": "ah-utils",
   "version": "1.0.4",
   "description": "前端工具库，支持高精度数学计算",
   "type": "module",
@@ -58,12 +58,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ahe-qyss/ah-utils-js"
+    "url": "https://github.com/ahe-qyss/ah-utils"
   },
   "bugs": {
-    "url": "https://github.com/ahe-qyss/ah-utils-js/issues"
+    "url": "https://github.com/ahe-qyss/ah-utils/issues"
   },
-  "homepage": "https://github.com/ahe-qyss/ah-utils-js#readme",
+  "homepage": "https://github.com/ahe-qyss/ah-utils#readme",
   "dependencies": {
     "decimal.js": "^10.6.0"
   },

@@ -2,7 +2,7 @@
 
 > 🚀 现代化的 JavaScript/TypeScript 工具库，提供高精度数学运算支持
 
-[![npm version](https://img.shields.io/npm/v/ah-utils-js.svg)](https://www.npmjs.com/package/ah-utils-js)
+[![npm version](https://img.shields.io/npm/v/ah-utils.svg)](https://www.npmjs.com/package/ah-utils)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.9-blue.svg)](https://www.typescriptlang.org/)
 
@@ -42,13 +42,13 @@
 
 ```bash
 # pnpm (推荐)
-pnpm add ah-utils-js
+pnpm add ah-utils
 
 # npm
-npm install ah-utils-js
+npm install ah-utils
 
 # yarn
-yarn add ah-utils-js
+yarn add ah-utils
 ```
 
 ---
@@ -58,7 +58,7 @@ yarn add ah-utils-js
 ### JavaScript
 
 ```javascript
-import { math, array, string } from 'ah-utils-js'
+import { math, array, string } from 'ah-utils'
 
 // 高精度数学运算
 math.add(0.1, 0.2)              // 0.3 ✅ (原生: 0.30000000000000004)
@@ -78,8 +78,8 @@ string.uuid()                   // 'a7b3c9d2-1234-...'
 ### TypeScript
 
 ```typescript
-import { math, array, base } from 'ah-utils-js'
-import type { MathValue, TreeNode } from 'ah-utils-js'
+import { math, array, base } from 'ah-utils'
+import type { MathValue, TreeNode } from 'ah-utils'
 
 // 完整的类型推导
 const result: number = math.add(1, 2)
@@ -189,7 +189,7 @@ const tree: TreeNode[] = array.arrayToTree(data)
 > 🎯 解决 JavaScript 浮点数精度问题，基于 decimal.js
 
 ```typescript
-import { math } from 'ah-utils-js'
+import { math } from 'ah-utils'
 ```
 
 #### `math.add(a, b, digit?)`
@@ -339,7 +339,7 @@ numbers.sort((a, b) => math.compare(a, b))
 ### 2. 数组模块 (Array)
 
 ```typescript
-import { array } from 'ah-utils-js'
+import { array } from 'ah-utils'
 ```
 
 #### `array.unique(arr)`
@@ -594,7 +594,7 @@ array.treeToArray(treeData, 'subNodes')
 ### 3. 字符串模块 (String)
 
 ```typescript
-import { string } from 'ah-utils-js'
+import { string } from 'ah-utils'
 ```
 
 #### `string.camelCase(str)`
@@ -779,7 +779,7 @@ string.truncate(content, 20)              // '这是一篇很长的文章内容.
 ### 4. 对象模块 (Object)
 
 ```typescript
-import { object } from 'ah-utils-js'
+import { object } from 'ah-utils'
 ```
 
 #### `object.deepClone(obj)`
@@ -1024,7 +1024,7 @@ object.omit(user, ['age'])
 ### 5. 基础类型判断模块 (Base)
 
 ```typescript
-import { base } from 'ah-utils-js'
+import { base } from 'ah-utils'
 ```
 
 #### `base.getType(value)`
@@ -1312,7 +1312,7 @@ base.isEquals(obj, obj)                   // true
 ### 金融计算
 
 ```typescript
-import { math } from 'ah-utils-js'
+import { math } from 'ah-utils'
 
 const price = 19.99
 const quantity = 3
@@ -1329,7 +1329,7 @@ console.log(`总计: ¥${final}`)
 ### 数据处理
 
 ```typescript
-import { array, base } from 'ah-utils-js'
+import { array, base } from 'ah-utils'
 
 const users = [
   { id: 1, name: 'Alice', age: 25, city: 'Beijing' },
@@ -1355,7 +1355,7 @@ const avgAge = array.mean(ages)  // 26.67
 ### 字符串处理
 
 ```typescript
-import { string } from 'ah-utils-js'
+import { string } from 'ah-utils'
 
 // API 参数格式转换
 const apiParam = 'user_name'
